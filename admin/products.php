@@ -69,9 +69,11 @@
                                 </a>
                             </td>
                             <td class="px-6 py-4">
-                                <form action="code.php" method="POST">
+                                <form action="code.php" method="POST" class="delete-form">
                                     <input type="hidden" name="id_produk" value="<?= $item['id_produk']; ?>">
-                                    <button type="submit" class="text-red-600 hover:underline font-medium" name="delete_products_btn">Delete</button>
+                                    <button type="submit" class="text-red-600 hover:underline font-medium delete-btn" name="delete_products_btn">
+                                        Delete
+                                    </button>
                                 </form>
                             </td>
                         </tr>

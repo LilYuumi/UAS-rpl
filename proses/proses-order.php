@@ -64,7 +64,7 @@ $order_id = $con->insert_id;
 $stmt->close();
 
 foreach ($cartItems as $item) {
-    $stmt2 = $con->prepare("INSERT INTO order_items (id_order, id_produk, qty, harga) VALUES (?, ?, ?, ?)");
+    $stmt2 = $con->prepare("INSERT INTO tb_order_items (id_order, id_produk, qty, harga) VALUES (?, ?, ?, ?)");
     $stmt2->bind_param("iiii", $order_id, $item['id_produk'], $item['prod_qty'], $item['harga_jual']);
     $stmt2->execute();
     $stmt2->close();

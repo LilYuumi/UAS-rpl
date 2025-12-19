@@ -73,7 +73,7 @@ $data = mysqli_fetch_array($orderData);
                             oi.qty as orderqty,
                             p.*
                         FROM tb_orders o
-                        INNER JOIN order_items oi ON oi.id_order = o.id_order
+                        INNER JOIN tb_order_items oi ON oi.id_order = o.id_order
                         INNER JOIN tb_produk p ON p.id_produk = oi.id_produk
                         AND o.no_tracking = '$tracking_no'
                     ";
